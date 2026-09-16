@@ -1,0 +1,27 @@
+.proyectos {
+  background: var(--surface);
+  padding-block: var(--section-y);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 60ch;
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: 30px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 17px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}

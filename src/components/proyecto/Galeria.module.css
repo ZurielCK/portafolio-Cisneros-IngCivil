@@ -1,0 +1,107 @@
+.section {
+  scroll-margin-top: var(--space-4);
+}
+
+.title {
+  font-size: 30px;
+  color: var(--navy-900);
+  margin: var(--space-1) 0 var(--space-5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-3);
+}
+
+.cell {
+  min-width: 0;
+}
+
+/* ---- Miniatura 1/1 ---- */
+.thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+
+.thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-3) var(--space-2) var(--space-2);
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  background: linear-gradient(
+    to top,
+    rgba(27, 42, 65, 0.85),
+    transparent
+  );
+}
+
+/* ---- Tarjeta "+N Ver más" ---- */
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--navy-900);
+  color: #fff;
+  box-shadow: var(--shadow-card);
+  transition: background var(--ease), transform var(--ease);
+}
+
+.more:hover {
+  background: var(--navy-700);
+  transform: translateY(-2px);
+}
+
+.moreNum {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.moreLabel {
+  font-size: 13px;
+  color: var(--on-navy-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

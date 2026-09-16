@@ -1,0 +1,53 @@
+:root {
+  /* ---- Colores ---- */
+  --navy-900: #1b2a41; /* Fondo hero, navbar, footer, sidebar */
+  --navy-700: #2c3e5c; /* Hover sobre navy, tarjetas oscuras */
+  --surface: #ffffff; /* Fondo de tarjetas */
+  --bg: #f4f6f9; /* Fondo general de secciones claras */
+  --text: #1f2937; /* Texto principal sobre claro */
+  --text-muted: #6b7280; /* Texto secundario */
+  --border: #e5e7eb; /* Bordes de tarjetas y divisores */
+  --accent: #2f6fed; /* Íconos, enlaces, estados activos */
+
+  /* Texto sobre navy */
+  --on-navy: #ffffff; /* Títulos sobre navy */
+  --on-navy-muted: #c9d3e0; /* Párrafos sobre navy */
+
+  /* ---- Tipografía ---- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+
+  /* ---- Espaciado (4 / 8 / 16 / 24 / 32 / 48 / 80) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 80px;
+
+  /* Padding vertical de sección */
+  --section-y: 80px;
+
+  /* ---- Forma ---- */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-pill: 999px;
+
+  /* ---- Sombra ---- */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(27, 42, 65, 0.12);
+
+  /* ---- Layout ---- */
+  --container: 1280px;
+  --navbar-h: 68px;
+
+  /* ---- Transiciones ---- */
+  --ease: 0.2s ease;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-y: 48px;
+  }
+}

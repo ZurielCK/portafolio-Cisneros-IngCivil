@@ -1,0 +1,71 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 20px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1;
+  border: 1px solid transparent;
+  transition: background var(--ease), color var(--ease),
+    border-color var(--ease), transform var(--ease);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ---- Primario ---- */
+.primary {
+  background: var(--navy-900);
+  color: #fff;
+}
+.primary:hover {
+  background: var(--navy-700);
+}
+
+/* ---- Secundario ---- */
+.secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.secondary:hover {
+  border-color: var(--navy-900);
+  background: var(--surface);
+}
+
+/* ---- Terciario ---- */
+.tertiary {
+  background: transparent;
+  color: var(--accent);
+  padding-inline: var(--space-2);
+}
+.tertiary:hover {
+  text-decoration: underline;
+}
+
+/* ---- Sobre navy ---- */
+.onNavy.primary {
+  background: #fff;
+  color: var(--navy-900);
+}
+.onNavy.primary:hover {
+  background: var(--on-navy-muted);
+}
+
+.onNavy.secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.onNavy.secondary:hover {
+  background: var(--navy-700);
+  border-color: #fff;
+}
+
+.onNavy.tertiary {
+  color: #7ea2f2;
+}

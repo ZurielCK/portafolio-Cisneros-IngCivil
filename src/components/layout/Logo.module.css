@@ -1,0 +1,47 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border-radius: var(--radius-btn);
+  border: 1.5px solid currentColor;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.role {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* Sobre navy */
+.onDark {
+  color: var(--on-navy);
+}
+
+/* Sobre claro */
+.logo:not(.onDark) {
+  color: var(--text);
+}
+.logo:not(.onDark) .box {
+  color: var(--navy-900);
+}

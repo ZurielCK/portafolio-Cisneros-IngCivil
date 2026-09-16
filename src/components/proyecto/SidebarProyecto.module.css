@@ -1,0 +1,205 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  width: 280px;
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-4);
+  background: var(--navy-900);
+  color: var(--on-navy-muted);
+  overflow: hidden;
+}
+
+/* Watermark del puente al fondo */
+.watermark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  width: 100%;
+  height: auto;
+  color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  color: var(--on-navy);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--on-navy-muted);
+  transition: color var(--ease);
+}
+
+.back:hover {
+  color: var(--on-navy);
+}
+
+/* ---- Navegación ---- */
+.nav {
+  position: relative;
+  z-index: 1;
+}
+
+.navTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--on-navy);
+  margin-bottom: var(--space-3);
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--on-navy-muted);
+  transition: background var(--ease), color var(--ease);
+}
+
+.navLink:hover {
+  background: var(--navy-700);
+  color: var(--on-navy);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.4;
+  flex: 0 0 auto;
+  transition: opacity var(--ease), transform var(--ease);
+}
+
+.active {
+  background: var(--navy-700);
+  color: var(--on-navy);
+}
+
+.active .dot {
+  opacity: 1;
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+/* ---- Redes al pie ---- */
+.social {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.socialBtn {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-btn);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--on-navy);
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.socialBtn:hover {
+  background: var(--navy-700);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- Móvil: barra superior con dropdown ---------- */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex: none;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-3);
+  }
+
+  .watermark,
+  .navTitle,
+  .social {
+    display: none;
+  }
+
+  .top {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .nav ul {
+    flex-direction: row;
+    gap: var(--space-1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navLink {
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .dot {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .nav ul {
+    justify-content: space-between;
+  }
+}

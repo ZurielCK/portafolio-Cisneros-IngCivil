@@ -1,0 +1,12 @@
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.onDark {
+  color: #7ea2f2; /* accent aclarado para contraste AA sobre navy */
+}
