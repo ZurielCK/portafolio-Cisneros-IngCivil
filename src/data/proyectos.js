@@ -1,4 +1,4 @@
-import { foto, deportivas } from "./imagenes.js";
+import { foto } from "./imagenes.js";
 
 export const proyectos = [
   {
@@ -86,30 +86,6 @@ export const proyectos = [
     })),
     imagenPrincipal: foto("muros (2)"),
     imagenCard: foto("muros (2)"),
-  },
-  {
-    slug: "deportiva",
-    titulo: "Deportiva",
-    tituloCorto: "Deportiva",
-    categoria: "Deporte universitario",
-    resumenCard: "El deporte también forma parte de mi trayectoria: disciplina, compañerismo y trabajo en equipo dentro y fuera de la cancha.",
-    descripcion: "Momentos de participación deportiva, encuentros universitarios y experiencias compartidas con el equipo.",
-    meta: { equipo: "Deporte en equipo" },
-    proceso: [
-      { titulo: "Preparación", descripcion: "Constancia y compromiso para afrontar cada encuentro." },
-      { titulo: "Participación", descripcion: "Trabajo en equipo y convivencia en la cancha." },
-      { titulo: "Experiencias compartidas", descripcion: "Recuerdos y reconocimientos que forman parte de mi etapa universitaria." },
-    ],
-    resultados: {
-      intro: "El deporte es un espacio para desarrollar disciplina y fortalecer el compañerismo.",
-      logros: ["Compromiso con el equipo.", "Perseverancia frente a nuevos retos.", "Convivencia con estudiantes de otras instituciones."],
-    },
-    galeria: ["deportivas (4)", "deportivas", "deportivas (2)", "deportivas (3)", "deportivas (5)", "deportivas (6)", "deportivas (7)"].map((nombre, i) => ({
-      src: foto(nombre), caption: `Deportiva · ${i + 1}`,
-    })),
-    imagenPrincipal: foto("deportivas (4)"),
-    imagenCard: foto("deportivas (4)"),
-    imagenesCard: deportivas,
   },
 ];
 

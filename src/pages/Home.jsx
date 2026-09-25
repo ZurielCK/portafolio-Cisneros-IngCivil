@@ -20,7 +20,6 @@ export default function Home() {
       <Navbar />
       <main id="main">
         <Hero />
-        <MiHistoria />
 
         <section id="proyectos" className={styles.proyectos}>
           <div className="container">
@@ -41,6 +40,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <MiHistoria />
       </main>
       <Footer />
     </>
