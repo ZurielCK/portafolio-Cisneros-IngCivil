@@ -1,9 +1,9 @@
-import { ArrowRight } from "lucide-react";
+import { Download } from "lucide-react";
 import styles from "./Hero.module.css";
 import Eyebrow from "../ui/Eyebrow.jsx";
 import Button from "../ui/Button.jsx";
 import ContactLinks from "../ui/ContactLinks.jsx";
-import { nombre, inicio } from "../../data/site.js";
+import { nombre, inicio, cvUrl } from "../../data/site.js";
 import { foto } from "../../data/imagenes.js";
 
 export default function Hero() {
@@ -14,15 +14,10 @@ export default function Hero() {
           <Eyebrow onDark>{inicio.etiqueta}</Eyebrow>
           <h1 className={styles.title}>{inicio.titulo}</h1>
           <p className={styles.lead}>{inicio.descripcion}</p>
+          {inicio.objetivo && <p className={styles.objetivo}>{inicio.objetivo}</p>}
           <div className={styles.ctas}>
-            <Button
-              href="#trayectoria"
-              variant="primary"
-              onNavy
-              icon={ArrowRight}
-              iconRight
-            >
-              {inicio.trayectoria}
+            <Button href={cvUrl} variant="primary" onNavy icon={Download} download>
+              {inicio.cv}
             </Button>
             <Button href="#proyectos" variant="secondary" onNavy>
               {inicio.proyectos}

@@ -1,11 +1,11 @@
-import { Award, Users, GraduationCap } from "lucide-react";
+import { Award, Trophy, GraduationCap } from "lucide-react";
 import styles from "./MiHistoria.module.css";
 import Eyebrow from "../ui/Eyebrow.jsx";
 import PhotoCarousel from "../ui/PhotoCarousel.jsx";
 import { historia } from "../../data/site.js";
 import { trayectoria } from "../../data/imagenes.js";
 
-const iconos = { award: Award, users: Users, graduation: GraduationCap };
+const iconos = { award: Award, trophy: Trophy, graduation: GraduationCap };
 
 export default function MiHistoria() {
   return (

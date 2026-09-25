@@ -9,8 +9,8 @@ export const lema =
 /** Enlaces de navegación por ancla (navbar y footer). */
 export const navLinks = [
   { id: "inicio", label: "Inicio" },
-  { id: "trayectoria", label: "Trayectoria" },
   { id: "proyectos", label: "Proyectos" },
+  { id: "trayectoria", label: "Trayectoria" },
   { id: "contacto", label: "Contacto" },
 ];
 
@@ -30,15 +30,16 @@ export const cvUrl = "/cv.pdf";
 
 export const inicio = {
   etiqueta: "Estudiante de Ingeniería Civil",
-  titulo: "Estudiante de Ingeniería Civil con visión, disciplina y experiencia académica destacada.",
-  descripcion: "Apasionado por la infraestructura y el diseño estructural. He representado a mi universidad en competencias estatales y proyectos académicos, combinando el rigor técnico con el trabajo en equipo para construir soluciones con propósito.",
+  titulo: nombre,
+  descripcion: "Diseño estructural y práctica constructiva, con participación en competencias estatales de ingeniería y trabajo en equipos multidisciplinarios.",
+  objetivo: "", // [PENDIENTE] Qué busca, por ejemplo: "Busco prácticas profesionales en estructuras".
   foto: "Landing",
-  trayectoria: "Ver trayectoria",
-  proyectos: "Explorar proyectos",
+  cv: "Descargar CV",
+  proyectos: "Ver proyectos",
 };
 
 export const historia = {
-  etiqueta: "Mi historia",
+  etiqueta: "Trayectoria",
   titulo: "Ingeniería con propósito",
   parrafos: [
     "La ingeniería civil es una forma de mejorar la vida de las personas. Mi trayectoria conecta teoría, práctica y responsabilidad social.",
@@ -46,7 +47,7 @@ export const historia = {
   ],
   valores: [
     { icono: "award", titulo: "Competencias estatales", descripcion: "Representación universitaria en concursos de diseño e ingeniería a nivel estatal." },
-    { icono: "users", titulo: "Trabajo colaborativo", descripcion: "Experiencia coordinando equipos multidisciplinarios hacia un objetivo común." },
+    { icono: "trophy", titulo: "Deporte universitario", descripcion: "3er lugar en fútbol rápido en un encuentro universitario: disciplina y trabajo en equipo fuera del aula." },
     { icono: "graduation", titulo: "Aprendizaje continuo", descripcion: "Formación constante en normativas, software y buenas prácticas del sector." },
   ],
 };
