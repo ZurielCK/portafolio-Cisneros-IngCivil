@@ -13,7 +13,7 @@ export default function ProyectoCard({ proyecto, reverse = false }) {
   return (
     <article className={`${styles.card} ${reverse ? styles.reverse : ""} reveal`}>
       <div className={styles.media}>
-        {proyecto.imagenesCard ? <PhotoCarousel images={proyecto.imagenesCard} label={`Fotografías: ${tituloCorto}`} /> : <img
+        {proyecto.imagenesCard ? <PhotoCarousel images={proyecto.imagenesCard} label={`Fotografías: ${tituloCorto}`} showControls={false} /> : <img
           src={imagenCard}
           alt={`Imagen del proyecto: ${tituloCorto}`}
           width="640"
