@@ -1,5 +1,5 @@
 import styles from "./Logo.module.css";
-import { nombre, rol } from "../../data/site.js";
+import { nombre, rol, iniciales } from "../../data/site.js";
 
 /**
  * Marca "AM" en caja + nombre y rol.
@@ -11,7 +11,7 @@ export default function Logo({ onDark = true, showText = true }) {
   return (
     <span className={`${styles.logo} ${onDark ? styles.onDark : ""}`}>
       <span className={styles.box} aria-hidden="true">
-        AM
+        {iniciales}
       </span>
       {showText && (
         <span className={styles.text}>

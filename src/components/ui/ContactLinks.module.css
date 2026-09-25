@@ -1,0 +1,7 @@
+.links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.item { position: relative; }
+.icon { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(220,235,255,.28); border-radius: 50%; color: #e3edf9; background: rgba(215,232,255,.08); padding: 0; transition: background .2s ease, border-color .2s ease; }
+.icon:hover, .icon:focus-visible { background: rgba(215,232,255,.2); border-color: rgba(220,235,255,.6); }
+.icon[aria-disabled="true"] { cursor: default; }
+.tooltip { position: absolute; z-index: 2; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: max-content; max-width: 160px; padding: 6px 10px; border-radius: 4px; background: #f1f5fa; color: #1b2a41; font-size: 11px; text-align: center; pointer-events: none; opacity: 0; }
+.item:hover .tooltip, .item:focus-within .tooltip { opacity: 1; }
