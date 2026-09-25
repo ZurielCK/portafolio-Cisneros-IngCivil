@@ -13,7 +13,7 @@ export default function ResumenProyecto({ proyecto }) {
   return (
     <section id="resumen" className={styles.section}>
       <div className={styles.badges}>
-        <span className={styles.year}>{anio}</span>
+        {anio && <span className={styles.year}>{anio}</span>}
         <span className={styles.cat}>{categoria}</span>
       </div>
 
@@ -21,7 +21,7 @@ export default function ResumenProyecto({ proyecto }) {
       <p className={styles.desc}>{descripcion}</p>
 
       <dl className={styles.meta}>
-        {metadatos.map(({ icon: Icon, label, valor }) => (
+        {metadatos.filter(item => item.valor).map(({ icon: Icon, label, valor }) => (
           <div key={label} className={styles.metaItem}>
             <span className={styles.metaIcon}>
               <Icon size={20} strokeWidth={1.5} />

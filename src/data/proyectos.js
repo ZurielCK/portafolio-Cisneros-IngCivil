@@ -1,8 +1,5 @@
-/**
- * Datos estáticos del portafolio. Un objeto por proyecto.
- * Las imágenes son placeholders en /public/img/ (dimensiones indicadas en specs);
- * el usuario las reemplazará. Contenido marcado con [PENDIENTE] debe sustituirse.
- */
+import { foto, deportivas } from "./imagenes.js";
+
 export const proyectos = [
   {
     slug: "concurso-puente-acero-nuevo-leon",
@@ -60,148 +57,62 @@ export const proyectos = [
         "Obtuvimos reconocimiento por la presentación y viabilidad de nuestra propuesta.",
       ],
     },
-    galeria: [
-      { src: "/img/puente-01.jpg", caption: "Trabajo en equipo" },
-      { src: "/img/puente-02.jpg", caption: "Modelo estructural" },
-      { src: "/img/puente-03.jpg", caption: "Presentación final" },
-      { src: "/img/puente-04.jpg", caption: "Planos estructurales" },
-      { src: "/img/puente-05.jpg", caption: "Prueba de carga" },
-      { src: "/img/puente-06.jpg", caption: "Equipo y jurado" },
-    ],
-    imagenPrincipal: "/img/puente-hero.jpg",
-    imagenCard: "/img/puente-card.jpg",
+    galeria: ["puentes3", "Puentes", "puentes (2)", "puentes2", "puentes4", "puentes5"].map((nombre, i) => ({
+      src: foto(nombre), caption: `Competencia de puentes · ${i + 1}`,
+    })),
+    imagenPrincipal: foto("puentes3"),
+    imagenCard: foto("puentes3"),
   },
 
   {
-    slug: "pavimentacion-drenaje-urbano",
-    titulo: "Pavimentación y Drenaje Urbano",
-    tituloCorto: "Pavimentación y Drenaje Urbano",
-    anio: 2023,
-    categoria: "Proyecto Académico",
-    resumenCard:
-      "Proyecto académico de diseño de un tramo vial con su sistema de drenaje pluvial, integrando cálculo hidráulico, selección de materiales y criterios de durabilidad. [PENDIENTE: ajustar copy]",
-    descripcion:
-      "Desarrollo integral de un tramo de vialidad urbana y su infraestructura de drenaje pluvial, considerando el estudio del terreno, el diseño geométrico, la estructura del pavimento y el manejo de escurrimientos. [PENDIENTE: sustituir por descripción real]",
-    meta: {
-      ubicacion: "Monterrey, Nuevo León",
-      equipo: "4 integrantes",
-      duracion: "2 meses",
-    },
+    slug: "levantamiento-de-muros",
+    titulo: "Levantamiento de muros",
+    tituloCorto: "Levantamiento de muros",
+    categoria: "Práctica constructiva",
+    resumenCard: "Trabajo en equipo y práctica en campo durante el levantamiento de un muro de mampostería.",
+    descripcion: "Una experiencia práctica de construcción de muros, desde la preparación del espacio hasta la colocación de bloques, con atención a la alineación y al trabajo en equipo.",
+    meta: { equipo: "Trabajo colaborativo" },
     proceso: [
-      {
-        titulo: "Investigación y análisis",
-        descripcion:
-          "Estudio del terreno, tránsito y precipitaciones de la zona. [PENDIENTE]",
-      },
-      {
-        titulo: "Diseño conceptual",
-        descripcion:
-          "Trazo geométrico de la vialidad y propuesta de secciones. [PENDIENTE]",
-      },
-      {
-        titulo: "Evaluación",
-        descripcion:
-          "Cálculo estructural del pavimento y dimensionamiento del drenaje. [PENDIENTE]",
-      },
-      {
-        titulo: "Prueba de carga",
-        descripcion:
-          "Verificación del comportamiento del pavimento ante cargas. [PENDIENTE]",
-      },
-      {
-        titulo: "Presentación final",
-        descripcion:
-          "Entrega de planos, memoria de cálculo y presentación. [PENDIENTE]",
-      },
+      { titulo: "Preparación", descripcion: "Organización del espacio, los materiales y las herramientas." },
+      { titulo: "Levantamiento", descripcion: "Colocación de bloques y mortero para formar el muro." },
+      { titulo: "Revisión", descripcion: "Atención a la alineación y al acabado de las juntas." },
     ],
     resultados: {
-      intro:
-        "El proyecto integró conocimientos de hidráulica, vías terrestres y materiales en una solución de infraestructura urbana. [PENDIENTE: sustituir intro]",
-      logros: [
-        "Diseñamos la estructura del pavimento conforme a la normativa aplicable. [PENDIENTE]",
-        "Dimensionamos el sistema de drenaje pluvial del tramo. [PENDIENTE]",
-        "Estimamos volúmenes de obra y un presupuesto preliminar. [PENDIENTE]",
-        "Coordinamos el trabajo entre las distintas disciplinas del equipo. [PENDIENTE]",
-        "Presentamos la memoria técnica y los planos finales. [PENDIENTE]",
-      ],
+      intro: "La práctica conecta los conocimientos del aula con el trabajo constructivo en campo.",
+      logros: ["Experiencia práctica con bloques y mortero.", "Coordinación de tareas durante el levantamiento del muro.", "Atención al orden y a la precisión en la ejecución."],
     },
-    galeria: [
-      { src: "/img/pavimento-01.jpg", caption: "[PENDIENTE] Levantamiento" },
-      { src: "/img/pavimento-02.jpg", caption: "[PENDIENTE] Trazo vial" },
-      { src: "/img/pavimento-03.jpg", caption: "[PENDIENTE] Sección de pavimento" },
-      { src: "/img/pavimento-04.jpg", caption: "[PENDIENTE] Red de drenaje" },
-      { src: "/img/pavimento-05.jpg", caption: "[PENDIENTE] Planos finales" },
-    ],
-    imagenPrincipal: "/img/pavimento-hero.jpg",
-    imagenCard: "/img/pavimento-card.jpg",
+    galeria: ["muros (2)", "muros", "muros (3)", "muros (4)", "muros (5)", "muros (6)"].map((nombre, i) => ({
+      src: foto(nombre), caption: `Levantamiento de muros · ${i + 1}`,
+    })),
+    imagenPrincipal: foto("muros (2)"),
+    imagenCard: foto("muros (2)"),
   },
-
   {
-    slug: "expo-academica-ingenieria-civil",
-    titulo: "Expo Académica de Ingeniería Civil",
-    tituloCorto: "Expo Académica de Ingeniería Civil",
-    anio: 2023,
-    categoria: "Evento Académico",
-    resumenCard:
-      "Organización y participación en una exposición académica donde se presentaron proyectos de ingeniería civil ante estudiantes, docentes y profesionales del sector. [PENDIENTE: ajustar copy]",
-    descripcion:
-      "Evento académico dedicado a la difusión de proyectos estudiantiles de ingeniería civil, con presentación de prototipos, maquetas y memorias técnicas ante un público de universidades y profesionales invitados. [PENDIENTE: sustituir por descripción real]",
-    meta: {
-      ubicacion: "Monterrey, Nuevo León",
-      equipo: "Comité de 8 integrantes",
-      duracion: "1 mes",
-    },
+    slug: "deportiva",
+    titulo: "Deportiva",
+    tituloCorto: "Deportiva",
+    categoria: "Deporte universitario",
+    resumenCard: "El deporte también forma parte de mi trayectoria: disciplina, compañerismo y trabajo en equipo dentro y fuera de la cancha.",
+    descripcion: "Momentos de participación deportiva, encuentros universitarios y experiencias compartidas con el equipo.",
+    meta: { equipo: "Deporte en equipo" },
     proceso: [
-      {
-        titulo: "Investigación y análisis",
-        descripcion:
-          "Definición de temática, alcance y objetivos del evento. [PENDIENTE]",
-      },
-      {
-        titulo: "Diseño conceptual",
-        descripcion:
-          "Planeación de stands, programa y logística general. [PENDIENTE]",
-      },
-      {
-        titulo: "Evaluación",
-        descripcion:
-          "Curaduría de los proyectos participantes y criterios de selección. [PENDIENTE]",
-      },
-      {
-        titulo: "Prueba de carga",
-        descripcion:
-          "Montaje, ensayos de presentación y ajustes previos. [PENDIENTE]",
-      },
-      {
-        titulo: "Presentación final",
-        descripcion:
-          "Exposición ante el público y cierre del evento. [PENDIENTE]",
-      },
+      { titulo: "Preparación", descripcion: "Constancia y compromiso para afrontar cada encuentro." },
+      { titulo: "Participación", descripcion: "Trabajo en equipo y convivencia en la cancha." },
+      { titulo: "Experiencias compartidas", descripcion: "Recuerdos y reconocimientos que forman parte de mi etapa universitaria." },
     ],
     resultados: {
-      intro:
-        "La expo permitió difundir el trabajo académico y fortalecer la vinculación entre estudiantes, docentes y el sector profesional. [PENDIENTE: sustituir intro]",
-      logros: [
-        "Coordinamos la logística y el programa del evento. [PENDIENTE]",
-        "Reunimos proyectos de varias universidades participantes. [PENDIENTE]",
-        "Facilitamos la vinculación con profesionales del sector. [PENDIENTE]",
-        "Desarrollamos material de difusión y señalética. [PENDIENTE]",
-        "Recibimos retroalimentación para futuras ediciones. [PENDIENTE]",
-      ],
+      intro: "El deporte es un espacio para desarrollar disciplina y fortalecer el compañerismo.",
+      logros: ["Compromiso con el equipo.", "Perseverancia frente a nuevos retos.", "Convivencia con estudiantes de otras instituciones."],
     },
-    galeria: [
-      { src: "/img/expo-01.jpg", caption: "[PENDIENTE] Montaje de stands" },
-      { src: "/img/expo-02.jpg", caption: "[PENDIENTE] Presentaciones" },
-      { src: "/img/expo-03.jpg", caption: "[PENDIENTE] Asistentes" },
-      { src: "/img/expo-04.jpg", caption: "[PENDIENTE] Proyectos expuestos" },
-      { src: "/img/expo-05.jpg", caption: "[PENDIENTE] Clausura" },
-    ],
-    imagenPrincipal: "/img/expo-hero.jpg",
-    imagenCard: "/img/expo-card.jpg",
+    galeria: ["deportivas (4)", "deportivas", "deportivas (2)", "deportivas (3)", "deportivas (5)", "deportivas (6)", "deportivas (7)"].map((nombre, i) => ({
+      src: foto(nombre), caption: `Deportiva · ${i + 1}`,
+    })),
+    imagenPrincipal: foto("deportivas (4)"),
+    imagenCard: foto("deportivas (4)"),
+    imagenesCard: deportivas,
   },
 ];
 
-/** Devuelve un proyecto por su slug (o undefined si no existe). */
 export function getProyecto(slug) {
-  return proyectos.find((p) => p.slug === slug);
+  return proyectos.find(p => p.slug === slug);
 }

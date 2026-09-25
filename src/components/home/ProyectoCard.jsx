@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import styles from "./ProyectoCard.module.css";
 import Button from "../ui/Button.jsx";
+import PhotoCarousel from "../ui/PhotoCarousel.jsx";
 
 /**
  * Tarjeta horizontal de proyecto destacado (Home).
@@ -12,17 +13,17 @@ export default function ProyectoCard({ proyecto, reverse = false }) {
   return (
     <article className={`${styles.card} ${reverse ? styles.reverse : ""} reveal`}>
       <div className={styles.media}>
-        <img
+        {proyecto.imagenesCard ? <PhotoCarousel images={proyecto.imagenesCard} label={`Fotografías: ${tituloCorto}`} /> : <img
           src={imagenCard}
           alt={`Imagen del proyecto: ${tituloCorto}`}
           width="640"
           height="360"
           loading="lazy"
-        />
+        />}
       </div>
 
       <div className={styles.body}>
-        <span className={styles.badge}>{anio}</span>
+        <span className={styles.badge}>{anio || proyecto.categoria}</span>
         <h3 className={styles.title}>{tituloCorto}</h3>
         <p className={styles.text}>{resumenCard}</p>
         <Button
